@@ -1,7 +1,10 @@
+<div class="container">
 <ul>
   <% @articles.each do |article| %>
-    <li><%=link_to article.title, article_path(article) %></li>
+    <li class="list-group-item"><%=link_to article.title, article_path(article) %></li>
   <% end %>
 </ul>
-
-<%= link_to "Add article", new_article_path %>
+</div>
+<div class="container">
+<button type="button" class="btn btn-dark"><%= link_to "Add article", new_article_path %></button>
+</div>
